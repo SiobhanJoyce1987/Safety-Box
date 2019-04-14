@@ -11,13 +11,10 @@ App Vertical
     flexShrink 1
     justifyContent center
     onClick <goToUpload
-    Text
-      color #303030
-      fontFamily Montserrat
-      fontSize 46
-      fontWeight 400
-      text Safety Box
     PoweredByUB
+    Saftybox01
+      height 300
+      width 300
   Upload Vertical
   onWhen <isUpload
     flexBasis auto
@@ -81,7 +78,7 @@ App Vertical
             fontSize 14
             fontWeight 600
             marginTop 24
-            text Documents required for a mortgage
+            text Documents required for your mortgage
             textTransform uppercase
           Payslips Vertical
             borderBottomLeftRadius 4
@@ -118,7 +115,7 @@ App Vertical
                   fontFamily Montserrat
                   fontSize 16
                   fontWeight 400
-                  text Upload 3 months of payslips
+                  text 3 months of payslips
                 Horizontal
                   borderBottomLeftRadius 4
                   borderBottomRightRadius 4
@@ -239,7 +236,7 @@ App Vertical
                   fontFamily Montserrat
                   fontSize 16
                   fontWeight 400
-                  text Upload 6 months of bank statements
+                  text 6 months of bank statements
                 Horizontal
                   borderBottomLeftRadius 4
                   borderBottomRightRadius 4
@@ -261,6 +258,7 @@ App Vertical
                     text Upload
             Vertical
             onWhen <hasStatements
+              marginTop 10
               Horizontal
                 borderBottomLeftRadius 4
                 borderBottomRightRadius 4
@@ -338,7 +336,7 @@ App Vertical
                   fontFamily Montserrat
                   fontSize 16
                   fontWeight 400
-                  text Upload salary certification
+                  text P60
                 Horizontal
                   borderBottomLeftRadius 4
                   borderBottomRightRadius 4
@@ -360,6 +358,7 @@ App Vertical
                     text Upload
             Vertical
             onWhen <hasSalaryCert
+              marginTop 10
               Horizontal
                 borderBottomLeftRadius 4
                 borderBottomRightRadius 4
@@ -380,7 +379,7 @@ App Vertical
                   fontSize 14
                   fontWeight 400
                   marginLeft 8
-                  text Salary-Cert.pdf
+                  text P60.pdf
           Vertical
           onWhen <hasAllDocuments
             alignItems flexStart
@@ -400,19 +399,19 @@ App Vertical
               fontWeight 400
               text We've verified your documents, to finalise your application, click below
             Horizontal
-              backgroundColor #ffaa00
+              backgroundColor #00d446
               borderBottomLeftRadius 4
               borderBottomRightRadius 4
               borderTopLeftRadius 4
               borderTopRightRadius 4
-              marginTop 4
+              marginTop 20
               onClick <complete
-              paddingBottom 4
-              paddingLeft 8
-              paddingRight 8
-              paddingTop 4
+              paddingBottom 8
+              paddingLeft 16
+              paddingRight 16
+              paddingTop 8
               Text
-                color #303030
+                color #ffffff
                 fontFamily Montserrat
                 fontSize 16
                 fontWeight 400
