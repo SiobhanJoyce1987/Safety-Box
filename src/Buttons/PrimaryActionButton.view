@@ -1,16 +1,11 @@
 PrimaryActionButton Horizontal
-  alignItems center
   alignSelf < auto
-  backgroundColor #00ba0c
+  backgroundColor #676767
   borderBottomLeftRadius 4
   borderBottomRightRadius 4
-  borderColor #00ba0c
-  borderStyle solid
   borderTopLeftRadius 4
   borderTopRightRadius 4
-  borderWidth 1
   cursor pointer
-  justifyContent center
   marginBottom < 0
   marginLeft < 0
   marginRight < 0
@@ -21,12 +16,12 @@ PrimaryActionButton Horizontal
   paddingRight 16
   paddingTop 8
   when <isHovered
-  backgroundColor #00c70d easeInOut
+  backgroundColor #3d4a83 easeInOut
   when <isSelected
-  backgroundColor #00c70d easeInOut
+  backgroundColor #1c2f83 easeInOut
   Text
     color #ffffff
     fontFamily Montserrat
-    fontSize 12
+    fontSize 16
     fontWeight 400
     text < Mortgage
