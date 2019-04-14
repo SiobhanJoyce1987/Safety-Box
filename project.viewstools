@@ -1,7 +1,7 @@
 {
   "version": 1,
   "media": {
-    "base": "mobile",
+    "base": "tablet",
     "mobile": {
       "width": 375,
       "height": 667

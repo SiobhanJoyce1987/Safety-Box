@@ -10,124 +10,473 @@ App Vertical
     flexGrow 1
     flexShrink 1
     justifyContent center
+    onClick <goToUpload
     Text
       color #303030
       fontFamily Montserrat
-      fontSize 16
+      fontSize 46
       fontWeight 400
-      text Tweka the text
-    Text
-      color #303030
-      fontFamily Montserrat
-      fontSize 16
-      fontWeight 400
-      text The more information you provide the more accurate your assessment will be.
-    Button
-      text Choice 1
-      Aib Ulster
-    Button
-      text Choice 2
-      Aib Kbc
-    Button
-      text Choice 3
-  Summary Horizontal
-  onWhen <isSummary
+      text Safety Box
+    PoweredByUB
+  Upload Vertical
+  onWhen <isUpload
     flexBasis auto
     flexGrow 1
     flexShrink 1
     overflowX hidden
     overflowY hidden
-    Vertical
-      SummaryCard
-        amountIn €223100.21
-        amountOut €2222.00
-        bank Ulster Bank
-        isSummaryTransactions <
-        onClick <toggleSummaryTransactions
-      SummaryCard
-        amountIn €55535.21
-        amountOut €980.00
-        bank Bank of Ireland
-      SummaryCard
-        amountIn €75535.21
-        amountOut €8200.00
-        bank AIB
-    Vertical
-    onWhen <!isSummaryTransactions
-      TitleText
-        text Some description about the summaries goes here
-    Transactions
-    onWhen <isSummaryTransactions
-  Decision Vertical
-  onWhen <isDecision
-    alignItems center
-    flexBasis auto
-    flexGrow 1
-    flexShrink 1
-    TitleText
-      marginTop 50
-      text Decision
-    BaseText
-      marginTop 10
-    Plan Vertical
+    Horizontal
       flexBasis auto
       flexGrow 1
       flexShrink 1
-      marginTop 30
-      width 700
-      Text
-        color #303030
-        fontFamily Montserrat
-        fontSize 10
-        fontWeight 600
-        text Step 1. Motgage Options
-        textTransform uppercase
-      Option Horizontal
-        marginTop 20
-        Ulster
-          height 60
-          width 60
-        OptionDescription Vertical
+      Vertical
+        backgroundColor #f5f5f5
+        borderBottomLeftRadius 4
+        borderBottomRightRadius 4
+        borderTopLeftRadius 4
+        borderTopRightRadius 4
+        paddingBottom 4
+        paddingLeft 12
+        paddingRight 12
+        paddingTop 4
+        shadowBlur 8
+        shadowColor rgba(100,150,180,0.2)
+        shadowOffsetX 0
+        shadowOffsetY 4
+        shadowSpread 0
+        width 300
+        Text
+          color #303030
+          fontFamily Montserrat
+          fontSize 16
+          fontWeight 400
+          marginTop 24
+          text I am applying for a:
+        PrimaryActionButton
+          id documents
+          marginTop 24
+          onClick <goTo
+          text Mortgage
+        PrimaryActionButton
+          marginTop 4
+          text Credit card
+        PrimaryActionButton
+          marginTop 4
+          text Personal loan
+        PrimaryActionButton
+          marginTop 4
+          text Current account
+      DocumentsArea Vertical
+      onWhen <isDocumentsArea
+        flexBasis auto
+        flexGrow 1
+        flexShrink 1
+        Vertical
           flexBasis auto
           flexGrow 1
           flexShrink 1
-          marginLeft 8
-          BoldText
-            text Ulster Bank
-          BaseText
-            marginTop 4
-            text 2 Year Fixed Mortgage
-          BaseText
-            text < 2.3% APR
-  BottomBar Horizontal
-    alignItems center
-    backgroundColor #ffffff
-    height 100
-    justifyContent spaceBetween
-    shadowBlur 20
-    shadowColor rgba(100,150,180,0.2)
-    shadowOffsetX 0
-    shadowOffsetY -4
-    shadowSpread 0
-    width 100%
-    Horizontal
-      width 100
-    PrimaryActionButton
-    onWhen <isLogin
-      id summary
-      onClick <goTo
-      text Go to summary
-    PrimaryActionButton
-    onWhen <isSummary
-      id decision
-      onClick <goTo
-      text See decision
-    LOGO Horizontal
-      alignItems center
-      backgroundColor #0051ff
-      height 100
-      justifyContent center
-      width 110
-      Mortgageconnectlogov1color01
-        height 50
-        width 100
+          paddingBottom 4
+          paddingLeft 24
+          paddingRight 8
+          paddingTop 4
+          Text
+            color #303030
+            fontFamily Montserrat
+            fontSize 16
+            fontWeight 400
+            marginTop 24
+            text Documents required for a mortgage
+          Vertical
+            borderBottomLeftRadius 4
+            borderBottomRightRadius 4
+            borderTopLeftRadius 4
+            borderTopRightRadius 4
+            marginTop 44
+            paddingBottom 4
+            paddingLeft 8
+            paddingRight 8
+            paddingTop 4
+            Horizontal
+              alignItems center
+              borderBottomLeftRadius 4
+              borderBottomRightRadius 4
+              borderTopLeftRadius 4
+              borderTopRightRadius 4
+              paddingBottom 4
+              paddingLeft 8
+              paddingRight 8
+              paddingTop 4
+              Horizontal
+                alignItems center
+                backgroundColor #fff8e9
+                borderBottomLeftRadius 4
+                borderBottomRightRadius 4
+                borderTopLeftRadius 4
+                borderTopRightRadius 4
+                height 100
+                onClick <uploadFiles
+                paddingBottom 8
+                paddingLeft 16
+                paddingRight 16
+                paddingTop 8
+                width 400
+                Text
+                  color #303030
+                  fontFamily Montserrat
+                  fontSize 16
+                  fontWeight 400
+                  text Upload 3 months of payslips
+              Horizontal
+                backgroundColor #ffaa00
+                borderBottomLeftRadius 4
+                borderBottomRightRadius 4
+                borderTopLeftRadius 4
+                borderTopRightRadius 4
+                marginLeft 50
+                onClick <uploadPayslips
+                paddingBottom 4
+                paddingLeft 8
+                paddingRight 8
+                paddingTop 4
+                Text
+                  color #303030
+                  fontFamily Montserrat
+                  fontSize 16
+                  fontWeight 400
+                  text Upload
+            Vertical
+            onWhen <hasPayslips
+              Horizontal
+                borderBottomLeftRadius 4
+                borderBottomRightRadius 4
+                borderTopLeftRadius 4
+                borderTopRightRadius 4
+                paddingBottom 4
+                paddingLeft 8
+                paddingRight 8
+                paddingTop 4
+                Check
+                  height 20
+                  marginLeft 10
+                  stroke #25cc17
+                  width 20
+                Text
+                  color #303030
+                  fontFamily Montserrat
+                  fontSize 14
+                  fontWeight 400
+                  marginLeft 8
+                  text January-2019.pdf
+              Horizontal
+                borderBottomLeftRadius 4
+                borderBottomRightRadius 4
+                borderTopLeftRadius 4
+                borderTopRightRadius 4
+                paddingBottom 4
+                paddingLeft 8
+                paddingRight 8
+                paddingTop 4
+                Check
+                  height 20
+                  marginLeft 10
+                  stroke #25cc17
+                  width 20
+                Text
+                  color #303030
+                  fontFamily Montserrat
+                  fontSize 14
+                  fontWeight 400
+                  marginLeft 8
+                  text February-2019.pdf
+              Horizontal
+                borderBottomLeftRadius 4
+                borderBottomRightRadius 4
+                borderTopLeftRadius 4
+                borderTopRightRadius 4
+                paddingBottom 4
+                paddingLeft 8
+                paddingRight 8
+                paddingTop 4
+                Check
+                  height 20
+                  marginLeft 10
+                  stroke #25cc17
+                  width 20
+                Text
+                  color #303030
+                  fontFamily Montserrat
+                  fontSize 14
+                  fontWeight 400
+                  marginLeft 8
+                  text March-2019.pdf
+          Vertical
+            borderBottomLeftRadius 4
+            borderBottomRightRadius 4
+            borderTopLeftRadius 4
+            borderTopRightRadius 4
+            marginTop 44
+            paddingBottom 4
+            paddingLeft 8
+            paddingRight 8
+            paddingTop 4
+            Horizontal
+              alignItems center
+              borderBottomLeftRadius 4
+              borderBottomRightRadius 4
+              borderTopLeftRadius 4
+              borderTopRightRadius 4
+              paddingBottom 4
+              paddingLeft 8
+              paddingRight 8
+              paddingTop 4
+              Horizontal
+                alignItems center
+                backgroundColor #fff8e9
+                borderBottomLeftRadius 4
+                borderBottomRightRadius 4
+                borderTopLeftRadius 4
+                borderTopRightRadius 4
+                height 100
+                onClick <uploadFiles
+                paddingBottom 8
+                paddingLeft 16
+                paddingRight 16
+                paddingTop 8
+                width 400
+                Text
+                  color #303030
+                  fontFamily Montserrat
+                  fontSize 16
+                  fontWeight 400
+                  text Upload 6 months of bank statements
+              Horizontal
+                backgroundColor #ffaa00
+                borderBottomLeftRadius 4
+                borderBottomRightRadius 4
+                borderTopLeftRadius 4
+                borderTopRightRadius 4
+                marginLeft 50
+                onClick <uploadStatements
+                paddingBottom 4
+                paddingLeft 8
+                paddingRight 8
+                paddingTop 4
+                Text
+                  color #303030
+                  fontFamily Montserrat
+                  fontSize 16
+                  fontWeight 400
+                  text Upload
+            Vertical
+            onWhen <hasStatements
+              Horizontal
+                borderBottomLeftRadius 4
+                borderBottomRightRadius 4
+                borderTopLeftRadius 4
+                borderTopRightRadius 4
+                paddingBottom 4
+                paddingLeft 8
+                paddingRight 8
+                paddingTop 4
+                Check
+                  height 20
+                  marginLeft 10
+                  stroke #25cc17
+                  width 20
+                Text
+                  color #303030
+                  fontFamily Montserrat
+                  fontSize 14
+                  fontWeight 400
+                  marginLeft 8
+                  text Q4-2018.pdf
+              Horizontal
+                borderBottomLeftRadius 4
+                borderBottomRightRadius 4
+                borderTopLeftRadius 4
+                borderTopRightRadius 4
+                paddingBottom 4
+                paddingLeft 8
+                paddingRight 8
+                paddingTop 4
+                Check
+                  height 20
+                  marginLeft 10
+                  stroke #25cc17
+                  width 20
+                Text
+                  color #303030
+                  fontFamily Montserrat
+                  fontSize 14
+                  fontWeight 400
+                  marginLeft 8
+                  text Q1-2019.pdf
+          Vertical
+            borderBottomLeftRadius 4
+            borderBottomRightRadius 4
+            borderTopLeftRadius 4
+            borderTopRightRadius 4
+            marginTop 44
+            paddingBottom 4
+            paddingLeft 8
+            paddingRight 8
+            paddingTop 4
+            Horizontal
+              alignItems center
+              borderBottomLeftRadius 4
+              borderBottomRightRadius 4
+              borderTopLeftRadius 4
+              borderTopRightRadius 4
+              paddingBottom 4
+              paddingLeft 8
+              paddingRight 8
+              paddingTop 4
+              Horizontal
+                alignItems center
+                backgroundColor #fff8e9
+                borderBottomLeftRadius 4
+                borderBottomRightRadius 4
+                borderTopLeftRadius 4
+                borderTopRightRadius 4
+                height 100
+                onClick <uploadFiles
+                paddingBottom 8
+                paddingLeft 16
+                paddingRight 16
+                paddingTop 8
+                width 400
+                Text
+                  color #303030
+                  fontFamily Montserrat
+                  fontSize 16
+                  fontWeight 400
+                  text Upload salary certification
+              Horizontal
+                backgroundColor #ffaa00
+                borderBottomLeftRadius 4
+                borderBottomRightRadius 4
+                borderTopLeftRadius 4
+                borderTopRightRadius 4
+                marginLeft 50
+                onClick <uploadSalaryCert
+                paddingBottom 4
+                paddingLeft 8
+                paddingRight 8
+                paddingTop 4
+                Text
+                  color #303030
+                  fontFamily Montserrat
+                  fontSize 16
+                  fontWeight 400
+                  text Upload
+            Horizontal
+            onWhen <hasSalaryCert
+              borderBottomLeftRadius 4
+              borderBottomRightRadius 4
+              borderTopLeftRadius 4
+              borderTopRightRadius 4
+              paddingBottom 4
+              paddingLeft 8
+              paddingRight 8
+              paddingTop 4
+              Check
+                height 20
+                marginLeft 10
+                stroke #25cc17
+                width 20
+              Text
+                color #303030
+                fontFamily Montserrat
+                fontSize 14
+                fontWeight 400
+                marginLeft 8
+                text Salary-Cert.jpg
+          Vertical
+          onWhen <hasAllDocuments
+            alignItems flexStart
+            borderBottomLeftRadius 4
+            borderBottomRightRadius 4
+            borderTopLeftRadius 4
+            borderTopRightRadius 4
+            marginTop 44
+            paddingBottom 4
+            paddingLeft 8
+            paddingRight 8
+            paddingTop 4
+            Text
+              color #303030
+              fontFamily Montserrat
+              fontSize 16
+              fontWeight 400
+              text We've verified your documents, to finalise your application, click below
+            Horizontal
+              backgroundColor #ffaa00
+              borderBottomLeftRadius 4
+              borderBottomRightRadius 4
+              borderTopLeftRadius 4
+              borderTopRightRadius 4
+              marginTop 4
+              onClick <complete
+              paddingBottom 4
+              paddingLeft 8
+              paddingRight 8
+              paddingTop 4
+              Text
+                color #303030
+                fontFamily Montserrat
+                fontSize 16
+                fontWeight 400
+                text Submit application
+          Vertical
+          onWhen <isComplete
+            alignItems center
+            backgroundColor rgba(5, 4, 0, 0.15)
+            borderBottomLeftRadius 4
+            borderBottomRightRadius 4
+            borderTopLeftRadius 4
+            borderTopRightRadius 4
+            height 100%
+            justifyContent center
+            left 0
+            paddingBottom 4
+            paddingLeft 8
+            paddingRight 8
+            paddingTop 4
+            position absolute
+            top 0
+            width 100%
+            zIndex 1
+            Vertical
+              backgroundColor #fff
+              borderBottomLeftRadius 4
+              borderBottomRightRadius 4
+              borderTopLeftRadius 4
+              borderTopRightRadius 4
+              paddingBottom 20
+              paddingLeft 50
+              paddingRight 50
+              paddingTop 50
+              Text
+                color #303030
+                fontFamily Montserrat
+                fontSize 16
+                fontWeight 400
+                text Thanks for your application.
+              Text
+                color #303030
+                fontFamily Montserrat
+                fontSize 16
+                fontWeight 400
+                text Your reference number is ref12345678.
+              Text
+                color #303030
+                fontFamily Montserrat
+                fontSize 16
+                fontWeight 400
+                text We'll email you these details to jenny@summers.com
+              PrimaryActionButton
+                alignSelf flexEnd
+                marginTop 20
+                onClick <reload
+                text Close
+    PoweredByUB

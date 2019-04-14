@@ -1,10 +1,9 @@
 Button Vertical
   backgroundColor #ffffff
+  marginLeft < 0
   onClick <
   when <isSelected
   backgroundColor #00b46b
-  Text
-    text < Go to summary
   Aib
     height 50
     proxy true

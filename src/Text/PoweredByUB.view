@@ -1,0 +1,24 @@
+PoweredByUB Horizontal
+  alignItems center
+  borderBottomLeftRadius 4
+  borderBottomRightRadius 4
+  borderTopLeftRadius 4
+  borderTopRightRadius 4
+  bottom 8
+  marginTop 24
+  paddingBottom 4
+  paddingLeft 8
+  paddingRight 8
+  paddingTop 4
+  position absolute
+  right 8
+  Text
+    color #303030
+    fontFamily Montserrat
+    fontSize 16
+    fontWeight 400
+    text Powered by
+  UbFlat
+    height 30
+    marginLeft 4
+    width 160

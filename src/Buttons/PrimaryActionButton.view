@@ -22,9 +22,11 @@ PrimaryActionButton Horizontal
   paddingTop 8
   when <isHovered
   backgroundColor #00c70d easeInOut
+  when <isSelected
+  backgroundColor #00c70d easeInOut
   Text
     color #ffffff
     fontFamily Montserrat
     fontSize 12
     fontWeight 400
-    text < Somethign else
+    text < Mortgage
